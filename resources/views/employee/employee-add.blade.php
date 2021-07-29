@@ -7,21 +7,23 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 
 <div class="container">
-    <form action="{{url('/student-add')}}" method="post">
+    <br>
+    <center><h3>Add Employee Information | <a href="{{ route('employee.view') }}">View Employee</a></h3></center>
+    @include('inc.message')
+    <form action="{{ route('employee.store') }}" method="post">
         @csrf
-        <h2>Student add</h2>
         <div class="form-group">
-            <label for="exampleInputEmail1">Name</label>
-            <input type="text" name="name" class="form-control"  placeholder="Enter email">
+            <label for="name">Name</label>
+            <input type="text" name="name" id="name" class="form-control"  placeholder="Enter name">
         </div>
         <div class="form-group">
-            <label for="exampleInputEmail1">Email address</label>
-            <input type="email" name="email"  class="form-control"  placeholder="Enter email">
+            <label for="designation">Designation</label>
+            <input type="text" name="designation" id="designation" class="form-control"  placeholder="Enter Designation">
 
         </div>
         <div class="form-group">
-            <label for="exampleInputPassword1">Number</label>
-            <input type="number" class="form-control" name="number" id="exampleInputPassword1" placeholder="Password">
+            <label for="address">Address</label>
+            <input type="text" class="form-control" name="address" id="address" placeholder="Enter Address">
         </div>
 
         <button type="submit" class="btn btn-primary">Submit</button>
