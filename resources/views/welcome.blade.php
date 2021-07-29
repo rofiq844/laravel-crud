@@ -10,3 +10,7 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </head>
 <body>
+  <center><h1>On Going Project</h1></center>
+  <a href="{{ route('employee.view') }}">Employee</a>
+</body>
+</html>  
